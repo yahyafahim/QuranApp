@@ -155,8 +155,8 @@ export class AudioInfo extends PureComponent {
     const item = this.props?.route?.params?.item;
     const index = this.props?.route?.params?.index;
     const arr = this.props?.route?.params?.arr;
-    const data = arr[index]?.ayahs;
-    // console.log('arr', data);
+    // const data = arr[index]?.ayahs;
+    console.log('arr', arr);
 
     return (
       <View style={{flex: 1}}>

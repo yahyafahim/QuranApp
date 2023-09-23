@@ -2,6 +2,14 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "src/assets/fonts/AbdoLine.ttf",
+      "sha1": "c4a59dc5f0950d1b9c686075531815651d5b9ba1"
+    },
+    {
+      "path": "src/assets/fonts/Adobe Arabic Regular.ttf",
+      "sha1": "49d4e3eda29be61ab13d71295ab0c74e2e001bfb"
+    },
+    {
       "path": "src/assets/fonts/AlQalamQuran.ttf",
       "sha1": "9de71861cce5b001e776402d8ec315cc5c04b398"
     },
@@ -10,8 +18,16 @@
       "sha1": "2e8a87dd8dff3c53ed17cdfe3427b350a9a48e44"
     },
     {
+      "path": "src/assets/fonts/ArabQuranIslamic140-w19wZ.ttf",
+      "sha1": "c9e86dacc03b969a906c4ba4bc4efc0900ddcc6f"
+    },
+    {
       "path": "src/assets/fonts/Arabic.ttf",
       "sha1": "0e27e312e0383c7118856185446f3f2bf347979a"
+    },
+    {
+      "path": "src/assets/fonts/BDavat.ttf",
+      "sha1": "0100f03ed29aec3c85d078861570a9ee1f46fe4c"
     },
     {
       "path": "src/assets/fonts/DecoType.ttf",
@@ -66,12 +82,24 @@
       "sha1": "5e07ba320fddf90e7b8a2e3f5ad6cd3d4e104c59"
     },
     {
+      "path": "src/assets/fonts/QuranSurah2-7Bov4.ttf",
+      "sha1": "07ab874fc1bbe7922fc14f571c4868ac7115cc1c"
+    },
+    {
       "path": "src/assets/fonts/ScheherazadeRegOT.ttf",
       "sha1": "701d24768f91a908b60db33ab0a098424da30808"
     },
     {
+      "path": "src/assets/fonts/Thabit.ttf",
+      "sha1": "936b5a4cad88f2c69aaa5f5707db4636574546f5"
+    },
+    {
       "path": "src/assets/fonts/_PDMS_Saleem_QuranFont.ttf",
       "sha1": "6317a8db41ac979d58b6f0577fba52223c608ef4"
+    },
+    {
+      "path": "src/assets/fonts/ae_Furat Regular.ttf",
+      "sha1": "ad03752a3f2a344eb4d873bacfb3bf73c780a6d6"
     },
     {
       "path": "src/assets/fonts/ar-Othmani.ttf",
@@ -80,6 +108,10 @@
     {
       "path": "src/assets/fonts/ar-Quran1.ttf",
       "sha1": "d7eea91c20af401eaae8372ef45d3866080fdc88"
+    },
+    {
+      "path": "src/assets/fonts/kitab.ttf",
+      "sha1": "884aa038e1ef4ffc069a5d6317ad3ce912edb819"
     },
     {
       "path": "src/assets/fonts/noorehidayat.ttf",

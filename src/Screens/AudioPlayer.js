@@ -138,7 +138,7 @@ class AudioPlayer extends Component {
         <View
           style={{
             flexDirection: 'row',
-            paddingTop: getStatusBarHeight(),
+            paddingTop: getStatusBarHeight() + 30,
             alignItems: 'center',
             paddingHorizontal: 30,
           }}>
@@ -177,10 +177,10 @@ class AudioPlayer extends Component {
           <LinearGradient
             start={{x: 1, y: 0}}
             end={{x: 0, y: 1}}
-            colors={['#863ED5', '#994EF8', '#3B1E77']}
+            colors={['#14913220', '#14915080', '#149162']}
             style={{
               marginTop: 10,
-              backgroundColor: '#994EF8',
+              // backgroundColor: '#994EF8',
               width: 350,
               height: 300,
               alignSelf: 'center',

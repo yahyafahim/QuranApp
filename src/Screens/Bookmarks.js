@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
-import {Colors} from '../config';
+import {Colors, NavService} from '../config';
 
 export class Bookmarks extends Component {
   render() {
@@ -12,7 +12,7 @@ export class Bookmarks extends Component {
             justifyContent: 'space-between',
             alignItems: 'center',
             flexDirection: 'row',
-            paddingTop: getStatusBarHeight(),
+            paddingTop: getStatusBarHeight() + 30,
             paddingHorizontal: 20,
           }}>
           <TouchableOpacity
@@ -31,6 +31,9 @@ export class Bookmarks extends Component {
           <View style={{width: 20, height: 20}} />
         </View>
         <TouchableOpacity
+          onPress={() => {
+            NavService.navigate('BookmarkedData');
+          }}
           style={{
             flexDirection: 'row',
             padding: 10,
@@ -51,7 +54,7 @@ export class Bookmarks extends Component {
                 fontWeight: '700',
                 color: Colors.color5,
               }}>
-              My Favorites Surahs
+              My Favorites Juz
             </Text>
             <Text style={{marginLeft: 10, fontSize: 12, marginTop: 5}}>
               My items
@@ -59,6 +62,9 @@ export class Bookmarks extends Component {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={() => {
+            NavService.navigate('FavoriteDetails');
+          }}
           style={{
             flexDirection: 'row',
             padding: 10,
@@ -79,7 +85,7 @@ export class Bookmarks extends Component {
                 fontWeight: '700',
                 color: Colors.color5,
               }}>
-              My Favorites Audio
+              My Favorites Ayahs
             </Text>
             <Text style={{marginLeft: 10, fontSize: 12, marginTop: 5}}>
               My items

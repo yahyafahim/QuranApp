@@ -39,6 +39,7 @@ const RenderItems = ({item, index}) => {
             fontSize: 20,
             fontWeight: 'bold',
             color: Colors.color5,
+            fontFamily: 'noorehira',
           }}>
           {item[0]?.text}
         </Text>
@@ -49,7 +50,9 @@ const RenderItems = ({item, index}) => {
           padding: 10,
           paddingHorizontal: 15,
         }}>
-        <Text style={{textAlign: 'center', fontSize: 18}}>{item[1]?.text}</Text>
+        <Text style={{textAlign: 'center', fontSize: 18, fontFamily: 'kitab'}}>
+          {item[1]?.text}
+        </Text>
       </View>
     </View>
   );

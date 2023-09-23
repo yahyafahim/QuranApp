@@ -6,11 +6,14 @@ import {
   View,
   Dimensions,
   ScrollView,
+  ImageBackground,
+  StatusBar,
 } from 'react-native';
 import {Colors, NavService} from '../config';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
 import LinearGradient from 'react-native-linear-gradient';
 import {connect} from 'react-redux';
+import thunk from 'redux-thunk';
 const palendrom = text => {
   console.log('text', text);
   if (text.length == 1) {
@@ -41,32 +44,43 @@ export class Dashboard extends Component {
     return (
       <View
         style={{flex: 1, backgroundColor: Colors.white, paddingHorizontal: 20}}>
+        {/* <StatusBar style={{backgroundColor: 'transparent'}} /> */}
         <View
           style={{
-            paddingTop: getStatusBarHeight(),
+            paddingTop: getStatusBarHeight() + 30,
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
           {/* <Image
-            style={{width: 30, height: 30}}
+            tintColor={'red'}
+            style={{width: 50, height: 50}}
             source={require('../assets/Icons/drawer.png')}
           /> */}
           <View style={{width: 30, height: 30}} />
           <Text
-            style={{fontSize: 20, fontWeight: 'bold', color: Colors.color5}}>
+            style={{
+              fontSize: 20,
+              fontWeight: 'bold',
+              color: Colors.color5,
+              flex: 1,
+              textAlign: 'center',
+            }}>
             QURAN
           </Text>
-          {/* <TouchableOpacity
+          <TouchableOpacity
             onPress={() => {
-              NavService.navigate('Profile');
+              console.log(this.props.navigation);
+              NavService.openDrawer();
             }}>
             <Image
+              resizeMode="contain"
+              tintColor={Colors.color5}
               style={{width: 30, height: 30}}
-              source={require('../assets/Icons/profile.png')}
+              source={require('../assets/Icons/drawer.png')}
             />
-          </TouchableOpacity> */}
-          <View style={{width: 30, height: 30}} />
+          </TouchableOpacity>
+          {/* <View style={{width: 30, height: 30}} /> */}
         </View>
         <View style={{}}>
           <Text
@@ -89,67 +103,88 @@ export class Dashboard extends Component {
           </Text>
         </View>
         <LinearGradient
-          start={{x: 0, y: 1}}
-          end={{x: 1, y: 0}}
-          style={{borderRadius: 10, flexDirection: 'row', marginTop: 20}}
-          colors={['#DF98FA', '#B27DFC', '#9055FF']}>
-          <View style={{padding: 20}}>
-            <View
-              style={{
-                flexDirection: 'row',
-                marginTop: 5,
-                alignItems: 'center',
-              }}>
-              <Image
-                resizeMode="contain"
-                source={require('../assets/Icons/Group.png')}
-                style={{width: 20, height: 20}}
-              />
+          start={{x: 0, y: 0}}
+          end={{x: 0, y: 1}}
+          style={{borderRadius: 10, marginTop: 20}}
+          colors={['#14913220', '#14915080', '#149162']}>
+          <ImageBackground
+            imageStyle={{
+              alignSelf: 'flex-end',
+              top: '40%',
+            }}
+            style={{flexDirection: 'row'}}
+            // resizeMode="contain"
+            source={require('../assets/Icons/Vector.png')}>
+            <View style={{padding: 20}}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  marginTop: 5,
+                  alignItems: 'center',
+                }}>
+                <Image
+                  resizeMode="contain"
+                  source={require('../assets/Icons/Group.png')}
+                  style={{width: 20, height: 20}}
+                />
+                <Text
+                  style={{
+                    marginLeft: 10,
+                    fontSize: 17,
+                    color: Colors.white,
+                    fontWeight: 'bold',
+                  }}>
+                  Last Read
+                </Text>
+              </View>
               <Text
                 style={{
-                  marginLeft: 10,
-                  fontSize: 17,
+                  marginTop: 20,
                   color: Colors.white,
-                  fontWeight: 'bold',
+                  fontSize: 20,
+                  fontWeight: '500',
                 }}>
-                Last Read
+                Start from there
               </Text>
+              <TouchableOpacity
+                onPress={() => {
+                  NavService.navigate('Quran');
+                }}
+                style={{
+                  flexDirection: 'row',
+                  backgroundColor: Colors.color5,
+                  padding: 10,
+                  borderRadius: 20,
+                  paddingHorizontal: 15,
+                  marginTop: 10,
+                  justifyContent: 'space-between',
+                }}>
+                <Text style={{color: Colors.white, fontSize: 15}}>
+                  Continue
+                </Text>
+                <Image
+                  tintColor={Colors.white}
+                  source={require('../assets/Icons/arrow.png')}
+                />
+              </TouchableOpacity>
             </View>
-            <Text
+            <View
               style={{
-                marginTop: 20,
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: '500',
+                flex: 1,
+                justifyContent: 'flex-end',
               }}>
-              Start from there
-            </Text>
-            <TouchableOpacity
-              onPress={() => {
-                NavService.navigate('Pdf');
-              }}
-              style={{
-                flexDirection: 'row',
-                backgroundColor: Colors.color5,
-                padding: 10,
-                borderRadius: 20,
-                paddingHorizontal: 15,
-                marginTop: 10,
-                justifyContent: 'space-between',
-              }}>
-              <Text style={{color: Colors.white, fontSize: 15}}>Continue</Text>
               <Image
-                tintColor={Colors.white}
-                source={require('../assets/Icons/arrow.png')}
+                tintColor={Colors.black + 80}
+                style={{
+                  width: 150,
+                  height: 150,
+                  marginLeft: 30,
+                  alignSelf: 'center',
+                }}
+                source={require('../assets/Icons/q.png')}
               />
-            </TouchableOpacity>
-          </View>
-          <View style={{flex: 1, justifyContent: 'flex-end'}}>
-            <Image
-              style={{alignSelf: 'flex-end'}}
-              source={require('../assets/Icons/qicon.png')}
-            />
-          </View>
+            </View>
+          </ImageBackground>
         </LinearGradient>
         <ScrollView
           style={{marginTop: 10}}
@@ -168,7 +203,7 @@ export class Dashboard extends Component {
               style={{
                 width: width / 2.5,
                 height: width / 2.5,
-                backgroundColor: '#DF98FA30',
+                backgroundColor: '#14916230',
                 borderRadius: 10,
                 justifyContent: 'space-between',
                 padding: 20,
@@ -194,7 +229,7 @@ export class Dashboard extends Component {
               style={{
                 width: width / 2.5,
                 height: width / 2.5,
-                backgroundColor: '#DF98FA30',
+                backgroundColor: '#14916230',
                 borderRadius: 10,
                 justifyContent: 'space-between',
                 padding: 20,
@@ -229,7 +264,7 @@ export class Dashboard extends Component {
               style={{
                 width: width / 2.5,
                 height: width / 2.5,
-                backgroundColor: '#DF98FA30',
+                backgroundColor: '#14916230',
                 borderRadius: 10,
                 justifyContent: 'space-between',
                 padding: 20,
@@ -256,7 +291,7 @@ export class Dashboard extends Component {
               style={{
                 width: width / 2.5,
                 height: width / 2.5,
-                backgroundColor: '#DF98FA30',
+                backgroundColor: '#14916230',
                 borderRadius: 10,
                 justifyContent: 'space-between',
                 padding: 20,
@@ -287,14 +322,14 @@ export class Dashboard extends Component {
               marginTop: 20,
               paddingHorizontal: 10,
             }}>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={() => {
                 NavService.navigate('Pdf');
               }}
               style={{
                 width: width / 2.5,
                 height: width / 2.5,
-                backgroundColor: '#DF98FA30',
+                   backgroundColor: '#14916230',
                 borderRadius: 10,
                 justifyContent: 'space-between',
                 padding: 20,
@@ -313,15 +348,15 @@ export class Dashboard extends Component {
                 style={{alignSelf: 'flex-end'}}
                 source={require('../assets/Icons/QICON2.png')}
               />
-            </TouchableOpacity>
-            <TouchableOpacity
+            </TouchableOpacity> */}
+            {/* <TouchableOpacity
               onPress={() => {
                 NavService.navigate('Audio');
               }}
               style={{
                 width: width / 2.5,
                 height: width / 2.5,
-                backgroundColor: '#DF98FA30',
+                backgroundColor: '#14916230',
                 borderRadius: 10,
                 justifyContent: 'space-between',
                 padding: 20,
@@ -343,7 +378,7 @@ export class Dashboard extends Component {
                 }}
                 source={require('../assets/Icons/audio.png')}
               />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </ScrollView>
       </View>

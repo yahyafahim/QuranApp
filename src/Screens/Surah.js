@@ -1,9 +1,11 @@
 import React, {Component, useEffect, useState} from 'react';
 import {
   ActivityIndicator,
+  Dimensions,
   FlatList,
   I18nManager,
   LayoutAnimation,
+  Platform,
   Text,
   TouchableOpacity,
   View,
@@ -56,6 +58,18 @@ const RenderItems = ({arr, item, index}) => {
       });
     });
   };
+  const screenWidth = Dimensions.get('window').width;
+  const maxFontSize = 24; // Maximum font size
+  const minFontSize = 16; // Minimum font sizes
+  const calculateFontSize = text => {
+    // Adjust the font size based on text length and screen width
+    const textWidth = text.length * maxFontSize; // Estimated width of the text
+    const fontSize = Math.min(
+      maxFontSize,
+      (screenWidth * maxFontSize) / textWidth,
+    );
+    return Math.max(minFontSize, fontSize); // Ensure a minimum font size
+  };
 
   const [isLongPress, setisLongPress] = useState(false);
   const [isPress, setisPress] = useState(false);
@@ -73,11 +87,20 @@ const RenderItems = ({arr, item, index}) => {
     خ: 'camel',
     // Add more letters and colors as needed
   };
+  letterColors['ّ'] = '#d4651e';
+  letterColors['ْ'] = '#77953c';
+  letterColors['ٓ'] = 'red';
 
   const words = data.split(' ');
   return (
     <TouchableOpacity
-      style={{borderBottomColor: Colors.dimGray, borderBottomWidth: 1, flex: 1}}
+      style={{
+        borderBottomColor: Colors.dimGray,
+        borderBottomWidth: 1,
+        // flexDirection: 'row-reverse',
+        flex: 1,
+        paddingHorizontal: 10,
+      }}
       onLongPress={() => {
         LayoutAnimation.easeInEaseOut();
         if (isPress) {
@@ -95,19 +118,24 @@ const RenderItems = ({arr, item, index}) => {
         }
       }}
       delayLongPress={1000}>
-      <View
-        style={{
-          flexDirection: 'row-reverse',
-          padding: 10,
-          margin: 10,
-        }}>
+      <View>
         <View
           style={{
             flexWrap: 'wrap',
             flexDirection: 'row-reverse',
+            // flex: 1,
           }}>
           {words.map((word, wordIndex) => (
-            <Text style={{paddingTop: 10}} key={wordIndex}>
+            <Text
+              // numberOfLines={4}
+              style={{
+                paddingTop: 10,
+                // backgroundColor: 'red',
+                // flexWrap: 'wrap',
+
+                // backgroundColor: 'yellow',
+              }}
+              key={wordIndex}>
               {word.split('').map((letter, letterIndex) => {
                 {
                   /* console.log(letter, wordIndex); */
@@ -115,12 +143,15 @@ const RenderItems = ({arr, item, index}) => {
 
                 return (
                   <Text
+                    numberOfLines={2}
                     key={letterIndex}
                     style={{
                       color: letterColors[letter],
-                      fontSize: 24,
+
+                      fontSize: calculateFontSize(word),
                       textAlign: 'right',
-                      fontFamily: 'PakTypeNaskhBasicWide',
+                      fontFamily:
+                        Platform.OS == 'android' ? 'kitab' : 'noorehira',
                     }}>
                     {letter}
                   </Text>
@@ -167,7 +198,7 @@ const RenderItems = ({arr, item, index}) => {
                 }
               />
             </TouchableOpacity>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={() => {
                 LayoutAnimation.easeInEaseOut();
                 setisFavourite(!isFavourite);
@@ -179,7 +210,7 @@ const RenderItems = ({arr, item, index}) => {
                 style={{width: 30, height: 30}}
                 source={require('../assets/Icons/heart.webp')}
               />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </View>
       ) : null}
@@ -250,10 +281,45 @@ export class Surah extends Component {
     isFavorite: false,
     renderNumber: 10,
     isLoading: true,
+    data: [],
+    isLoader: true,
   };
-
+  getJuzData = async () => {
+    this.setState({isLoading: true});
+    fetch(
+      `https://api.alquran.cloud/v1/juz/${
+        this.props.route.params.index + 1
+      }quran-uthmani`,
+    )
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.setState({data: res.data, isLoading: false});
+      });
+  };
+  getSurahData = async () => {
+    this.setState({isLoading: true});
+    fetch(
+      `https://api.alquran.cloud/v1/surah/${
+        this.props.route.params.index + 1
+      }/ar.alafasy`,
+    )
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.setState({data: res.data, isLoading: false});
+      });
+  };
+  componentDidMount() {
+    if (this.props.route.params.juz) {
+      this.getJuzData();
+    } else {
+      this.getSurahData();
+    }
+  }
   render() {
-    const arr = this.props.route.params.item;
+    const arr = this.props.route.params.index;
+    console.log(arr);
     return (
       <View style={{flex: 1}}>
         <View
@@ -285,7 +351,8 @@ export class Surah extends Component {
                 textAlign: 'center',
                 marginBottom: 5,
               }}>
-              {arr.englishName}
+              {this.props.route.params.juz ? 'Chapter ' : 'Surah '}{' '}
+              {this.state.data.number}
             </Text>
             {/* <Image
               tintColor={Colors.white}
@@ -296,35 +363,49 @@ export class Surah extends Component {
             onPress={() => {
               this.setState({isFavorite: !this.state.isFavorite});
             }}>
-            <Image
+            {/* <Image
               tintColor={this.state.isFavorite ? 'red' : Colors.white}
               resizeMode="contain"
               source={require('../assets/Icons/heart.webp')}
-              style={{width: 35, height: 35}}
-            />
+              style={{width: 35, height: 35}}xx
+            /> */}
           </TouchableOpacity>
         </View>
         <View style={{flex: 8, backgroundColor: 'white'}}>
-          <FlatList
-            initialNumToRender={this.state.renderNumber}
-            // style={{backgroundColor: 'red'}}
-            onEndReachedThreshold={0.5}
-            onEndReached={() => {
-              // this.setState({renderNumber: this.state.renderNumber + 10});
-              this.setState({isLoading: false});
-            }}
-            ListFooterComponent={() => {
-              if (this.state.isLoading)
-                return (
-                  <ActivityIndicator color={Colors.color5} size={'large'} />
-                );
-            }}
-            keyExtractor={(item, index) => index.toString()}
-            data={arr.ayahs}
-            renderItem={({item, index}) => (
-              <RenderItems arr={arr} item={item} index={index} />
-            )}
-          />
+          {this.state.isLoading ? (
+            <ActivityIndicator
+              style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
+              color={Colors.color5}
+              size={'large'}
+            />
+          ) : (
+            <FlatList
+              style={{flex: 1}}
+              contentContainerStyle={{
+                flexGrow: 1,
+                // backgroundColor: 'yellow',
+                // justifyContent: 'center',
+              }}
+              // initialNumToRender={this.state.renderNumber}
+              // style={{backgroundColor: 'red'}}
+              onEndReachedThreshold={0.9}
+              onEndReached={() => {
+                // this.setState({renderNumber: this.state.renderNumber + 10});
+                this.setState({isLoader: false});
+              }}
+              ListFooterComponent={() => {
+                if (this.state.isLoader)
+                  return (
+                    <ActivityIndicator color={Colors.color5} size={'large'} />
+                  );
+              }}
+              keyExtractor={(item, index) => index.toString()}
+              data={this.state?.data?.ayahs}
+              renderItem={({item, index}) => (
+                <RenderItems arr={arr} item={item} index={index} />
+              )}
+            />
+          )}
         </View>
       </View>
     );

@@ -11,6 +11,8 @@ const INITIAL_STATES = {
   savedLastPage: 1,
   startOverPge: 1,
   quranAudioData2: null,
+  bookMarkedData: [],
+  favouriteData: [],
 };
 
 export default function (state = INITIAL_STATES, action) {
@@ -19,6 +21,16 @@ export default function (state = INITIAL_STATES, action) {
       return {
         ...state,
         user: action.payload,
+      };
+    case 'SAVE_FAVOURITE_DATA':
+      return {
+        ...state,
+        favouriteData: action.payload,
+      };
+    case 'SAVE_BOOKMARKED_DATA':
+      return {
+        ...state,
+        bookMarkedData: action.payload,
       };
     case 'START_OVER':
       return {

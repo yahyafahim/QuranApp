@@ -1,58 +1,8 @@
+import {FlatList, Image, ImageBackground, Text, View} from 'react-native';
 import React, {Component} from 'react';
-import {
-  Image,
-  Text,
-  TouchableOpacity,
-  View,
-  FlatList,
-  ActivityIndicator,
-} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import {Colors, NavService} from '../config';
-import getApi from '../redux/RequestTypes/get';
-import {connect} from 'react-redux';
-import {getStatusBarHeight} from 'react-native-status-bar-height';
-
-const RenderItems = ({arr, item, index}) => {
-  return (
-    <TouchableOpacity
-      onPress={() => {
-        NavService.navigate('AudioPlayer', {item, arr, index});
-      }}
-      style={{
-        marginBottom: 10,
-        margin: 10,
-        padding: 10,
-        flexDirection: 'row',
-        alignItems: 'center',
-        borderBottomColor: Colors.dimGray,
-        borderBottomWidth: 1,
-      }}>
-      <View
-        style={{
-          width: 30,
-          height: 30,
-          borderRadius: 5,
-          backgroundColor: Colors.color5 + 80,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <Text style={{color: Colors.white, fontWeight: 600}}>{index + 1}</Text>
-      </View>
-      <View style={{flex: 1, padding: 10, paddingHorizontal: 15}}>
-        <Text>{item?.name}</Text>
-        <Text style={{color: Colors.dimGray, marginTop: 5}}>
-          {item?.meaning}
-        </Text>
-      </View>
-      <Image
-        tintColor={Colors.color5}
-        resizeMode="contain"
-        style={{width: 50, height: 50}}
-        source={require('../assets/Icons/play.png')}
-      />
-    </TouchableOpacity>
-  );
-};
+import {TouchableOpacity} from 'react-native-gesture-handler';
 const quranSurahs = [
   {name: 'Al-Fatihah', meaning: 'The Opening'},
   {name: 'Al-Baqarah', meaning: 'The Cow'},
@@ -170,82 +120,105 @@ const quranSurahs = [
   {name: 'An-Nas', meaning: 'Mankind'},
 ];
 
-class Listen extends Component {
-  state = {
-    data: [],
-    renderNumber: 10,
-    isLoading: true,
-  };
-  getData = async () => {
-    const data = await getApi(
-      'https://api.quran.com/api/v4/chapter_recitations/4?language=en',
-    );
-    console.log('Audiodata', data.audio_files);
-    this.setState({data: data.audio_files});
-  };
-  componentDidMount() {
-    // this.getData();
-  }
+const RenderItem = ({item, selected, setSelected, index}) => {
+  console.log('se;e', selected);
+  return (
+    <TouchableOpacity
+      onPress={() => {
+        setSelected();
+        NavService?.navigate('Surah', {item, index});
+      }}
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 5,
+        backgroundColor: index == selected ? Colors.color5 : 'transparent',
+        borderRadius: 10,
+        marginBottom: 5,
+      }}>
+      <View
+        style={{
+          width: 40,
+          height: 40,
+          borderRadius: 10,
+          backgroundColor: 'white',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Text>{index + 1}</Text>
+      </View>
+      <Text
+        style={{
+          flex: 1,
+          fontWeight: '600',
+          marginLeft: 10,
+          color: Colors.black,
+        }}>
+        {item.name + ' ' + '(' + item.meaning + ')'}
+      </Text>
+    </TouchableOpacity>
+  );
+};
 
+export class Juz extends Component {
+  state = {
+    selected: '0',
+  };
   render() {
     return (
       <View style={{flex: 1}}>
-        <View
-          style={{
-            backgroundColor: Colors.color5,
-            // justifyContent: 'space-between',
-            alignItems: 'center',
-            flexDirection: 'row',
-            paddingHorizontal: 30,
-            paddingTop: getStatusBarHeight() + 30,
-            paddingBottom: 30,
-          }}>
-          <TouchableOpacity
-            onPress={() => {
-              NavService.goBack();
-            }}>
-            <Image
-              tintColor={Colors.white}
-              style={{width: 20, height: 20}}
-              source={require('../assets/Icons/back.png')}
-            />
-          </TouchableOpacity>
-          <Text
+        <LinearGradient
+          start={{x: 0, y: 0}}
+          end={{x: 0, y: 1}}
+          style={{height: 120}}
+          colors={['#14916280', '#14915080', '#149162']}>
+          <ImageBackground
+            imageStyle={{
+              alignSelf: 'flex-end',
+              top: '40%',
+            }}
             style={{
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: 'bold',
-              textAlign: 'center',
               flex: 1,
-            }}>
-            Surah
-          </Text>
-          <View style={{width: 30, height: 30}} />
-        </View>
-        <View style={{flex: 8}}>
+              flexDirection: 'row',
+              alignItems: 'center',
+              paddingHorizontal: 30,
+            }}
+            // resizeMode="contain"
+            source={require('../assets/Icons/Vector.png')}>
+            <TouchableOpacity
+              onPress={() => {
+                NavService.goBack();
+              }}>
+              <Image
+                tintColor={Colors.white}
+                resizeMode="contain"
+                style={{width: 20, height: 20}}
+                source={require('../assets/Icons/back.png')}
+              />
+            </TouchableOpacity>
+            <Text
+              style={{
+                flex: 1,
+                textAlign: 'center',
+                fontWeight: 'bold',
+                fontSize: 20,
+                color: Colors.white,
+              }}>
+              Choose your chapter
+            </Text>
+          </ImageBackground>
+        </LinearGradient>
+        <View style={{flex: 1, paddingVertical: 50}}>
           <FlatList
-            initialNumToRender={this.state.renderNumber}
-            ListFooterComponent={() => {
-              if (this.state.isLoading)
-                return (
-                  <ActivityIndicator color={Colors.color5} size={'large'} />
-                );
-            }}
-            onEndReachedThreshold={0.5}
-            onEndReached={() => {
-              this.setState({
-                // renderNumber: this.state.renderNumber + 10,
-                isLoading: false,
-              });
-            }}
-            // style={{backgroundColor: 'red'}}
-            keyExtractor={(item, index) => index.toString()}
+            initialNumToRender={114}
+            contentContainerStyle={{padding: 10}}
             data={quranSurahs}
             renderItem={({item, index}) => (
-              <RenderItems
-                arr={this.props.quranAudioData2}
-                item={item}
+              <RenderItem
+                selected={this.state.selected}
+                setSelected={() => this.setState({selected: index})}
                 index={index}
+                item={item}
               />
             )}
           />
@@ -254,11 +227,5 @@ class Listen extends Component {
     );
   }
 }
-const mapStateToProps = ({reducer}) => {
-  console.log('audio', reducer.quranAudioData2);
-  return {
-    quranAudioData2: reducer.quranAudioData2,
-  };
-};
 
-export default connect(mapStateToProps)(Listen);
+export default Juz;

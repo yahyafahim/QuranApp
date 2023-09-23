@@ -23,6 +23,7 @@ const Colors = {
   color2: '#A8DEE0',
   color3: '#F9E2AE',
   color4: '#FBC78D',
-  color5: '#3B1E77',
+  color5: '#149162',
+  // background: linear-gradient(91.5deg, #149162 0.87%, #17B277 98.26%);
 };
 export default Colors;

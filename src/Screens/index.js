@@ -13,6 +13,12 @@ import QWT from './QWT';
 import PdfViewer from './PdfViewer';
 import AudioAyaat from './AudioAyaat';
 import AudioInfo from './AudioInfo';
+import Juz from './Juz';
+import BookmarkedData from './BookmarkedData';
+import SurahDetailsColor from '../components/SurahDetailsColor';
+import QuranSurah from './QuranSurah';
+import Tajweed from '../components/TajweedHelper';
+import FavoriteDetails from './FavoriteDetails';
 
 export {
   Signin,
@@ -30,4 +36,10 @@ export {
   PdfViewer,
   AudioAyaat,
   AudioInfo,
+  Juz,
+  BookmarkedData,
+  SurahDetailsColor,
+  QuranSurah,
+  FavoriteDetails,
+  Tajweed,
 };
