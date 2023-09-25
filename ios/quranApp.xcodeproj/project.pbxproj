@@ -19,7 +19,6 @@
 		1B8D5B60272442D6A03A8D7E /* AlQalamQuran.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7A272F7E7EB48A5B49B5901 /* AlQalamQuran.ttf */; };
 		22426EC12A97DB3F0069C3F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22426EC02A97DB3F0069C3F4 /* GoogleService-Info.plist */; };
 		2F288A6B60244E00B436EFE3 /* BDavat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9E61D0968194478975F9A61 /* BDavat.ttf */; };
-		3393ABBB589F4E378D5751CB /* PakTypeNaskhBasicWide.woff in Resources */ = {isa = PBXBuildFile; fileRef = 8BA9670C23AD4D36B0D07B1A /* PakTypeNaskhBasicWide.woff */; };
 		3ACFABB8203C48ACAB6D83F3 /* AmiriQuran.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 824617C21CC94C8FA170717B /* AmiriQuran.ttf */; };
 		474F655B3497453FB8D49422 /* Hafs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC2ABAFBDCC34E519ABE7385 /* Hafs.ttf */; };
 		48F4588030FE45BAA3463FCD /* Thabit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA33E3F9EAD64B139770810B /* Thabit.ttf */; };
@@ -32,9 +31,7 @@
 		8A5DFAC4CB444489B03F5160 /* QUR_STD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4B68E1BA64747F8A22B72E2 /* QUR_STD.ttf */; };
 		931A951C541043DB92622D18 /* Arabic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53755D32C0FE46D0AD592B1E /* Arabic.ttf */; };
 		984DC5A950514341BA643815 /* ae_Furat Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3C71391D364455AB2551656 /* ae_Furat Regular.ttf */; };
-		9EB99E10D7F84271B6F81278 /* PakTypeNaskhBasicWide.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = C653B7EA1AF74E18822F7017 /* PakTypeNaskhBasicWide.woff2 */; };
 		A6B31AAB5A004C7991750432 /* Quran.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A863F69A26184F2B887A7745 /* Quran.ttf */; };
-		AA3AD46954364080A2CF41A8 /* PakTypeNaskhBasicWide.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9602844F08C4D5FA1B6C7A7 /* PakTypeNaskhBasicWide.svg */; };
 		AB9602255CC044D2BC88BDC5 /* PakTypeNaskhBasicWide.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D87145161AAD42B591AA453D /* PakTypeNaskhBasicWide.ttf */; };
 		BB062D3535844673B25F8C22 /* QuranSurah2-7Bov4.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66457620EDA046DA9AD19FC7 /* QuranSurah2-7Bov4.ttf */; };
 		DE390AC6A133462C9F4C5AFC /* kitab.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 811D916FEECF49189F6B7DF4 /* kitab.ttf */; };
@@ -44,7 +41,20 @@
 		F2B260E0C6EDDBA97211EF91 /* Pods_quranApp_quranAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2359A2D8008D473590268B79 /* Pods_quranApp_quranAppTests.framework */; };
 		F5D04D763BE34C65B5DB4CE3 /* noorehidayat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CA2A850FBE4B16B0A5030D /* noorehidayat.ttf */; };
 		F64AEBB462FD4305A0279E24 /* MADDINA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE17FA0C9C494D39867705EE /* MADDINA.ttf */; };
-		FB4BC96469DB4956831440F2 /* PakTypeNaskhBasicWide.eot in Resources */ = {isa = PBXBuildFile; fileRef = 82FE484AE7D64554B83D816A /* PakTypeNaskhBasicWide.eot */; };
+		8D518C89AAED4ED69182A132 /* noto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABDE5C474654F1397CB24A9 /* noto.ttf */; };
+		EE658E9993654E209C1C5D86 /* AmiriQuran-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0056690466A94B1DAC0CBD16 /* AmiriQuran-Regular.ttf */; };
+		1A130A42937B495BB81A17C0 /* BFerdosi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 639B35355AC841DBBABE559A /* BFerdosi.ttf */; };
+		1953170CD1E04D658ED45D55 /* KacstBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0F74C32F9F34A9FB479D074 /* KacstBook.ttf */; };
+		0CA65F5DE0C2407C9E4680B1 /* arabtype.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 052F50AD49AF4EA2B0953126 /* arabtype.ttf */; };
+		B308E54F558D4B6EBDDA4FB1 /* AfaratibnBlady.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DA9DBC6CC264C5C8E865115 /* AfaratibnBlady.ttf */; };
+		79DEE828735A4CA490C30E0E /* simpo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 331BC6C9AEB4454DBF57D2F5 /* simpo.ttf */; };
+		AC0E757D08F44D8AAC24F5DF /* KFGQPC Uthmanic Script HAFS Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1620B52DAFA4677BB751186 /* KFGQPC Uthmanic Script HAFS Regular.otf */; };
+		7CE797286BBF41D181084652 /* Me Quran.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93DCF038838D4D8DA60E148A /* Me Quran.ttf */; };
+		646A9FC197B74DB7936E4639 /* Neirizi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52076FE3758742DBB7AD517E /* Neirizi.ttf */; };
+		A43562F1A9C241DA8E81133F /* Quran karim 114.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02261E97EF7049E4B1000FA7 /* Quran karim 114.ttf */; };
+		58EC79D6C9784707A1F6BF86 /* allah names color.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 237E983B984B429C955EB1AC /* allah names color.ttf */; };
+		B0780B176EB140D282FE52A5 /* ar-ALHAWE_QURAN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB2BB59CCA40D8837808EF /* ar-ALHAWE_QURAN.ttf */; };
+		27C33E5988654AF4A7E177C5 /* font islamic color.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F10CFAF79B144888B66DF87 /* font islamic color.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,9 +95,7 @@
 		811D916FEECF49189F6B7DF4 /* kitab.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = kitab.ttf; path = ../src/assets/fonts/kitab.ttf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = quranApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		824617C21CC94C8FA170717B /* AmiriQuran.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AmiriQuran.ttf; path = ../src/assets/fonts/AmiriQuran.ttf; sourceTree = "<group>"; };
-		82FE484AE7D64554B83D816A /* PakTypeNaskhBasicWide.eot */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PakTypeNaskhBasicWide.eot; path = ../src/assets/fonts/PakTypeNaskhBasicWide.eot; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-quranApp-quranAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quranApp-quranAppTests.release.xcconfig"; path = "Target Support Files/Pods-quranApp-quranAppTests/Pods-quranApp-quranAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		8BA9670C23AD4D36B0D07B1A /* PakTypeNaskhBasicWide.woff */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PakTypeNaskhBasicWide.woff; path = ../src/assets/fonts/PakTypeNaskhBasicWide.woff; sourceTree = "<group>"; };
 		8ECA03750D7A4A35B717A3B9 /* ar-Quran1.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ar-Quran1.ttf"; path = "../src/assets/fonts/ar-Quran1.ttf"; sourceTree = "<group>"; };
 		A2CA2A850FBE4B16B0A5030D /* noorehidayat.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = noorehidayat.ttf; path = ../src/assets/fonts/noorehidayat.ttf; sourceTree = "<group>"; };
 		A863F69A26184F2B887A7745 /* Quran.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Quran.ttf; path = ../src/assets/fonts/Quran.ttf; sourceTree = "<group>"; };
@@ -95,17 +103,29 @@
 		BA33E3F9EAD64B139770810B /* Thabit.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Thabit.ttf; path = ../src/assets/fonts/Thabit.ttf; sourceTree = "<group>"; };
 		BC2ABAFBDCC34E519ABE7385 /* Hafs.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Hafs.ttf; path = ../src/assets/fonts/Hafs.ttf; sourceTree = "<group>"; };
 		C3F021680D7F45A686E7DA90 /* ar-Othmani.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ar-Othmani.ttf"; path = "../src/assets/fonts/ar-Othmani.ttf"; sourceTree = "<group>"; };
-		C653B7EA1AF74E18822F7017 /* PakTypeNaskhBasicWide.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PakTypeNaskhBasicWide.woff2; path = ../src/assets/fonts/PakTypeNaskhBasicWide.woff2; sourceTree = "<group>"; };
 		C7A272F7E7EB48A5B49B5901 /* AlQalamQuran.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AlQalamQuran.ttf; path = ../src/assets/fonts/AlQalamQuran.ttf; sourceTree = "<group>"; };
 		CE17FA0C9C494D39867705EE /* MADDINA.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MADDINA.ttf; path = ../src/assets/fonts/MADDINA.ttf; sourceTree = "<group>"; };
 		D4B68E1BA64747F8A22B72E2 /* QUR_STD.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = QUR_STD.ttf; path = ../src/assets/fonts/QUR_STD.ttf; sourceTree = "<group>"; };
 		D87145161AAD42B591AA453D /* PakTypeNaskhBasicWide.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PakTypeNaskhBasicWide.ttf; path = ../src/assets/fonts/PakTypeNaskhBasicWide.ttf; sourceTree = "<group>"; };
 		E107C56AC2B34A90A30DEDD8 /* AbdoLine.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AbdoLine.ttf; path = ../src/assets/fonts/AbdoLine.ttf; sourceTree = "<group>"; };
-		E9602844F08C4D5FA1B6C7A7 /* PakTypeNaskhBasicWide.svg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PakTypeNaskhBasicWide.svg; path = ../src/assets/fonts/PakTypeNaskhBasicWide.svg; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F106B2A0AF2448F1BAF120F4 /* ArabQuranIslamic140-w19wZ.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ArabQuranIslamic140-w19wZ.ttf"; path = "../src/assets/fonts/ArabQuranIslamic140-w19wZ.ttf"; sourceTree = "<group>"; };
 		F3C71391D364455AB2551656 /* ae_Furat Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ae_Furat Regular.ttf"; path = "../src/assets/fonts/ae_Furat Regular.ttf"; sourceTree = "<group>"; };
 		F9E61D0968194478975F9A61 /* BDavat.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = BDavat.ttf; path = ../src/assets/fonts/BDavat.ttf; sourceTree = "<group>"; };
+		2ABDE5C474654F1397CB24A9 /* noto.ttf */ = {isa = PBXFileReference; name = "noto.ttf"; path = "../src/assets/fonts/noto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0056690466A94B1DAC0CBD16 /* AmiriQuran-Regular.ttf */ = {isa = PBXFileReference; name = "AmiriQuran-Regular.ttf"; path = "../src/assets/fonts/AmiriQuran-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		639B35355AC841DBBABE559A /* BFerdosi.ttf */ = {isa = PBXFileReference; name = "BFerdosi.ttf"; path = "../src/assets/fonts/BFerdosi.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C0F74C32F9F34A9FB479D074 /* KacstBook.ttf */ = {isa = PBXFileReference; name = "KacstBook.ttf"; path = "../src/assets/fonts/KacstBook.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		052F50AD49AF4EA2B0953126 /* arabtype.ttf */ = {isa = PBXFileReference; name = "arabtype.ttf"; path = "../src/assets/fonts/arabtype.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8DA9DBC6CC264C5C8E865115 /* AfaratibnBlady.ttf */ = {isa = PBXFileReference; name = "AfaratibnBlady.ttf"; path = "../src/assets/fonts/AfaratibnBlady.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		331BC6C9AEB4454DBF57D2F5 /* simpo.ttf */ = {isa = PBXFileReference; name = "simpo.ttf"; path = "../src/assets/fonts/simpo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A1620B52DAFA4677BB751186 /* KFGQPC Uthmanic Script HAFS Regular.otf */ = {isa = PBXFileReference; name = "KFGQPC Uthmanic Script HAFS Regular.otf"; path = "../src/assets/fonts/KFGQPC Uthmanic Script HAFS Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		93DCF038838D4D8DA60E148A /* Me Quran.ttf */ = {isa = PBXFileReference; name = "Me Quran.ttf"; path = "../src/assets/fonts/Me Quran.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		52076FE3758742DBB7AD517E /* Neirizi.ttf */ = {isa = PBXFileReference; name = "Neirizi.ttf"; path = "../src/assets/fonts/Neirizi.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		02261E97EF7049E4B1000FA7 /* Quran karim 114.ttf */ = {isa = PBXFileReference; name = "Quran karim 114.ttf"; path = "../src/assets/fonts/Quran karim 114.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		237E983B984B429C955EB1AC /* allah names color.ttf */ = {isa = PBXFileReference; name = "allah names color.ttf"; path = "../src/assets/fonts/allah names color.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3FAB2BB59CCA40D8837808EF /* ar-ALHAWE_QURAN.ttf */ = {isa = PBXFileReference; name = "ar-ALHAWE_QURAN.ttf"; path = "../src/assets/fonts/ar-ALHAWE_QURAN.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7F10CFAF79B144888B66DF87 /* font islamic color.ttf */ = {isa = PBXFileReference; name = "font islamic color.ttf"; path = "../src/assets/fonts/font islamic color.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +197,6 @@
 				53755D32C0FE46D0AD592B1E /* Arabic.ttf */,
 				10518CD732304F2EA9857E49 /* LPMQ.ttf */,
 				D87145161AAD42B591AA453D /* PakTypeNaskhBasicWide.ttf */,
-				82FE484AE7D64554B83D816A /* PakTypeNaskhBasicWide.eot */,
-				E9602844F08C4D5FA1B6C7A7 /* PakTypeNaskhBasicWide.svg */,
-				8BA9670C23AD4D36B0D07B1A /* PakTypeNaskhBasicWide.woff */,
-				C653B7EA1AF74E18822F7017 /* PakTypeNaskhBasicWide.woff2 */,
 				C7A272F7E7EB48A5B49B5901 /* AlQalamQuran.ttf */,
 				16B70EF052A541279AE86E99 /* _PDMS_Saleem_QuranFont.ttf */,
 				A2CA2A850FBE4B16B0A5030D /* noorehidayat.ttf */,
@@ -201,6 +217,20 @@
 				E107C56AC2B34A90A30DEDD8 /* AbdoLine.ttf */,
 				B6A4111FAF9F4EDA993903CE /* Adobe Arabic Regular.ttf */,
 				F3C71391D364455AB2551656 /* ae_Furat Regular.ttf */,
+				2ABDE5C474654F1397CB24A9 /* noto.ttf */,
+				0056690466A94B1DAC0CBD16 /* AmiriQuran-Regular.ttf */,
+				639B35355AC841DBBABE559A /* BFerdosi.ttf */,
+				C0F74C32F9F34A9FB479D074 /* KacstBook.ttf */,
+				052F50AD49AF4EA2B0953126 /* arabtype.ttf */,
+				8DA9DBC6CC264C5C8E865115 /* AfaratibnBlady.ttf */,
+				331BC6C9AEB4454DBF57D2F5 /* simpo.ttf */,
+				A1620B52DAFA4677BB751186 /* KFGQPC Uthmanic Script HAFS Regular.otf */,
+				93DCF038838D4D8DA60E148A /* Me Quran.ttf */,
+				52076FE3758742DBB7AD517E /* Neirizi.ttf */,
+				02261E97EF7049E4B1000FA7 /* Quran karim 114.ttf */,
+				237E983B984B429C955EB1AC /* allah names color.ttf */,
+				3FAB2BB59CCA40D8837808EF /* ar-ALHAWE_QURAN.ttf */,
+				7F10CFAF79B144888B66DF87 /* font islamic color.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -354,10 +384,6 @@
 				931A951C541043DB92622D18 /* Arabic.ttf in Resources */,
 				EC1E2FF933824E81AACD1745 /* LPMQ.ttf in Resources */,
 				AB9602255CC044D2BC88BDC5 /* PakTypeNaskhBasicWide.ttf in Resources */,
-				FB4BC96469DB4956831440F2 /* PakTypeNaskhBasicWide.eot in Resources */,
-				AA3AD46954364080A2CF41A8 /* PakTypeNaskhBasicWide.svg in Resources */,
-				3393ABBB589F4E378D5751CB /* PakTypeNaskhBasicWide.woff in Resources */,
-				9EB99E10D7F84271B6F81278 /* PakTypeNaskhBasicWide.woff2 in Resources */,
 				1B8D5B60272442D6A03A8D7E /* AlQalamQuran.ttf in Resources */,
 				56B9383B61D34612AF0C56CD /* _PDMS_Saleem_QuranFont.ttf in Resources */,
 				F5D04D763BE34C65B5DB4CE3 /* noorehidayat.ttf in Resources */,
@@ -378,6 +404,20 @@
 				029DC2BDE72E43D3B1B0DA90 /* AbdoLine.ttf in Resources */,
 				04D6178F433247FCBBF31DB3 /* Adobe Arabic Regular.ttf in Resources */,
 				984DC5A950514341BA643815 /* ae_Furat Regular.ttf in Resources */,
+				8D518C89AAED4ED69182A132 /* noto.ttf in Resources */,
+				EE658E9993654E209C1C5D86 /* AmiriQuran-Regular.ttf in Resources */,
+				1A130A42937B495BB81A17C0 /* BFerdosi.ttf in Resources */,
+				1953170CD1E04D658ED45D55 /* KacstBook.ttf in Resources */,
+				0CA65F5DE0C2407C9E4680B1 /* arabtype.ttf in Resources */,
+				B308E54F558D4B6EBDDA4FB1 /* AfaratibnBlady.ttf in Resources */,
+				79DEE828735A4CA490C30E0E /* simpo.ttf in Resources */,
+				AC0E757D08F44D8AAC24F5DF /* KFGQPC Uthmanic Script HAFS Regular.otf in Resources */,
+				7CE797286BBF41D181084652 /* Me Quran.ttf in Resources */,
+				646A9FC197B74DB7936E4639 /* Neirizi.ttf in Resources */,
+				A43562F1A9C241DA8E81133F /* Quran karim 114.ttf in Resources */,
+				58EC79D6C9784707A1F6BF86 /* allah names color.ttf in Resources */,
+				B0780B176EB140D282FE52A5 /* ar-ALHAWE_QURAN.ttf in Resources */,
+				27C33E5988654AF4A7E177C5 /* font islamic color.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

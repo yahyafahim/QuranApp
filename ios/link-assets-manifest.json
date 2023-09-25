@@ -10,8 +10,16 @@
       "sha1": "49d4e3eda29be61ab13d71295ab0c74e2e001bfb"
     },
     {
+      "path": "src/assets/fonts/AfaratibnBlady.ttf",
+      "sha1": "14c18acc6d16d264bc297d45d6e422457869cd46"
+    },
+    {
       "path": "src/assets/fonts/AlQalamQuran.ttf",
       "sha1": "9de71861cce5b001e776402d8ec315cc5c04b398"
+    },
+    {
+      "path": "src/assets/fonts/AmiriQuran-Regular.ttf",
+      "sha1": "eeab2554d07bab559a9e1bf012b46362eb2256b1"
     },
     {
       "path": "src/assets/fonts/AmiriQuran.ttf",
@@ -30,12 +38,24 @@
       "sha1": "0100f03ed29aec3c85d078861570a9ee1f46fe4c"
     },
     {
+      "path": "src/assets/fonts/BFerdosi.ttf",
+      "sha1": "9628dac079246dc07c5b9e16e24b33be63815214"
+    },
+    {
       "path": "src/assets/fonts/DecoType.ttf",
       "sha1": "c9ca64fef9227f7c5dd0da2bd59230346ffbaecb"
     },
     {
       "path": "src/assets/fonts/Hafs.ttf",
       "sha1": "44947ac5accc8ff55df56a67ebdac34451c482fe"
+    },
+    {
+      "path": "src/assets/fonts/KFGQPC Uthmanic Script HAFS Regular.otf",
+      "sha1": "23868a63cc7188f94875b97ca0c60a3b1d172919"
+    },
+    {
+      "path": "src/assets/fonts/KacstBook.ttf",
+      "sha1": "662412a303f9d682335136091e9de0fa4df18693"
     },
     {
       "path": "src/assets/fonts/Kitab-Regular.ttf",
@@ -54,28 +74,24 @@
       "sha1": "a600a201b25ff0e1d46f4965ba60355f5d1b800f"
     },
     {
-      "path": "src/assets/fonts/PakTypeNaskhBasicWide.eot",
-      "sha1": "d8f69ea2011ad614acfb2080f02bf87374d0bbe2"
+      "path": "src/assets/fonts/Me Quran.ttf",
+      "sha1": "98bbd32a4db4ef3f24283dc012fc991452c80eb7"
     },
     {
-      "path": "src/assets/fonts/PakTypeNaskhBasicWide.svg",
-      "sha1": "e88b17bd76e7264d4a70fd23217d2d4957f6f4cd"
+      "path": "src/assets/fonts/Neirizi.ttf",
+      "sha1": "bbf751ffec8ce4bc3bb2cfa45a50be3fa94bec49"
     },
     {
       "path": "src/assets/fonts/PakTypeNaskhBasicWide.ttf",
       "sha1": "5c4c64cef48aa212a63c782be309a0908a7cf3c7"
     },
     {
-      "path": "src/assets/fonts/PakTypeNaskhBasicWide.woff",
-      "sha1": "e1091e3567c3992fa0854fa75ada9ca6ff9b85ab"
-    },
-    {
-      "path": "src/assets/fonts/PakTypeNaskhBasicWide.woff2",
-      "sha1": "f0f31c8a25b2f8a156d938ad07cca590982fb4d8"
-    },
-    {
       "path": "src/assets/fonts/QUR_STD.ttf",
       "sha1": "114433b8bc0a870698d3e63dd8210ff88583a2d5"
+    },
+    {
+      "path": "src/assets/fonts/Quran karim 114.ttf",
+      "sha1": "201672a70722850f4c398ffe181cfa8a98fe62b0"
     },
     {
       "path": "src/assets/fonts/Quran.ttf",
@@ -102,12 +118,28 @@
       "sha1": "ad03752a3f2a344eb4d873bacfb3bf73c780a6d6"
     },
     {
+      "path": "src/assets/fonts/allah names color.ttf",
+      "sha1": "81caebcdbaebdfce50e371d6e5d2f77fb9d942c9"
+    },
+    {
+      "path": "src/assets/fonts/ar-ALHAWE_QURAN.ttf",
+      "sha1": "f8fc4dc105268e1d1a8347fc96d547ff2f038da7"
+    },
+    {
       "path": "src/assets/fonts/ar-Othmani.ttf",
       "sha1": "3ca042aeb82d173476a809cb6acd39c31fd75324"
     },
     {
       "path": "src/assets/fonts/ar-Quran1.ttf",
       "sha1": "d7eea91c20af401eaae8372ef45d3866080fdc88"
+    },
+    {
+      "path": "src/assets/fonts/arabtype.ttf",
+      "sha1": "0f6df320fd133112b83ffccee95fb8fcb80e01e0"
+    },
+    {
+      "path": "src/assets/fonts/font islamic color.ttf",
+      "sha1": "19fa87a1a3717e6206d3beb8a9846780cae7ee6b"
     },
     {
       "path": "src/assets/fonts/kitab.ttf",
@@ -120,6 +152,14 @@
     {
       "path": "src/assets/fonts/noorehira.ttf",
       "sha1": "79e25a3004dfdc8b464883e1f878dcba067f6ce4"
+    },
+    {
+      "path": "src/assets/fonts/noto.ttf",
+      "sha1": "3be96332f481a99c4e706edf2884cd9edfacb9fa"
+    },
+    {
+      "path": "src/assets/fonts/simpo.ttf",
+      "sha1": "0e57cde624315df0b0bfce11b02bc5cc88b5eb3d"
     }
   ]
 }

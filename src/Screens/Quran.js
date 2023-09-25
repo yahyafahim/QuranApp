@@ -99,12 +99,11 @@ const RenderItems = ({
       duration={300}
       key={index}
       style={{
-        padding: 10,
+        padding: 5,
         textAlign: index == data1?.length - 1 ? 'right' : 'justify',
         writingDirection: 'rtl',
-        direction: 'rtl',
         fontFamily: Platform.OS == 'android' ? 'kitab' : 'noorehira',
-        fontSize: pageNumber == 1 || pageNumber == 2 ? 32 : 30,
+        fontSize: pageNumber == 1 || pageNumber == 2 ? 32 : 28,
       }}>
       {data.split('').map((item, charindex) => {
         return (
@@ -218,6 +217,7 @@ class Quran extends PureComponent {
       itemNumber,
       verse: '',
       itemData: item,
+      isFavourite: false,
     });
   };
 
@@ -230,6 +230,9 @@ class Quran extends PureComponent {
   //   }
   // };
 
+  onPress = () => {
+    this.setState({isLongPress: false, isFavourite: false});
+  };
   componentWillUnmount() {
     SoundPlayer.stop();
     this.props.SaveLastPage(this.state.pageNumber);
@@ -280,18 +283,13 @@ class Quran extends PureComponent {
   };
 
   render() {
-    console.log('ite,', this.state.itemData);
     let ate = this.props.bookMarkedData?.map(i => i.number);
     let fav = this.props.favouriteData?.map(i => i.number);
-    console.log('fact', fav);
-    console.log(this.state.itemNumber);
-    // if (ate.includes(this.state.itemNumber)) {
-    //   // console.log('hi');
-    // } else {
-    //   // console.log('bye');
-    // }
-
-    console.log(ate);
+    console.log('item', this.state?.itemData?.number);
+    console.log('sds', fav);
+    console.log('isFav', this.state.isFavourite);
+    let condition = fav?.includes(this.state?.itemData?.number);
+    console.log('condition', condition);
     return (
       <View style={{flex: 1}}>
         <View
@@ -390,11 +388,9 @@ class Quran extends PureComponent {
               flex: 1,
               borderWidth: 3,
               borderColor: Colors.color5,
-              margin: 10,
+              margin: 8,
               marginBottom: 20,
-
               borderStyle: 'dashed',
-              // backgroundColor: 'red',
             }}>
             <View
               style={{
@@ -402,9 +398,7 @@ class Quran extends PureComponent {
                 borderWidth: 3,
                 borderColor: Colors.color5,
                 margin: 3,
-
                 borderStyle: 'dashed',
-                // backgroundColor: 'red',
               }}>
               {this.state.isLoading ? (
                 <ActivityIndicator
@@ -420,7 +414,6 @@ class Quran extends PureComponent {
                 <ScrollView
                   key={this.state.pageNumber}
                   contentContainerStyle={{
-                    paddingBottom: 5,
                     flexGrow: 1,
                   }}
                   style={{flex: 1, marginTop: 10}}>
@@ -469,9 +462,7 @@ class Quran extends PureComponent {
                                 pageNumber={this.state.pageNumber}
                                 item={item}
                                 index={index}
-                                onPress={() => {
-                                  this.setState({isLongPress: false});
-                                }}
+                                onPress={this.onPress}
                                 onLongPress={this.onLongPress}
                                 data1={this.state.data.ayahs}
                               />
@@ -481,13 +472,7 @@ class Quran extends PureComponent {
                       </View>
                     </View>
                   ) : (
-                    <Text
-                      style={{
-                        padding: 10,
-                        textAlign: 'justify',
-                        writingDirection: 'rtl',
-                        direction: 'rtl',
-                      }}>
+                    <Text style={{padding: 5}}>
                       {this.state?.data?.ayahs?.map((item, index) => {
                         return (
                           <RenderItems
@@ -600,7 +585,7 @@ class Quran extends PureComponent {
                         />
                       </TouchableOpacity>
                       <TouchableOpacity
-                        disabled={fav?.includes(this.state.itemNumber)}
+                        disabled={condition}
                         onPress={() => {
                           LayoutAnimation.easeInEaseOut();
                           this.onFavouritePress();
@@ -608,7 +593,7 @@ class Quran extends PureComponent {
                         style={{marginLeft: 10}}>
                         <Image
                           tintColor={
-                            fav?.includes(this.state.itemNumber)
+                            condition
                               ? 'red'
                               : this.state.isFavourite
                               ? 'red'
